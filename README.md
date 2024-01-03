@@ -16,7 +16,6 @@ These instructions will help you set up the project on your local machine for de
 1. **Prerequisites:**
    - Salesforce Developer Account: [Sign up here](https://developer.salesforce.com/signup)
    - Salesforce CLI: [Install instructions](https://developer.salesforce.com/tools/sfdxcli)
-   - ...
 
 2. **Installation:**
    ```bash
