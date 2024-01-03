@@ -8,7 +8,6 @@ This repository contains a beginner-level Salesforce project. The project is des
 
 - **Feature 1:** [All code you would see in this project is a combination of the Apex Developer Documentation and my own experience as well]
 - **Feature 2:** [This github repository is aimed at begginers at Salesforce, but also there are examples which could be helpful for the experienced users]
-- ...
 
 ## Getting Started
 
