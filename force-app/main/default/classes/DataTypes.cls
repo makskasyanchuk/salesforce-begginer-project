@@ -1,4 +1,7 @@
 public with sharing class DataTypes {
+
+    // Primitive data types
+
     public static Blob blobDataType() {
         // Blob Data type: Represents a collection of binary data. Often used to handle files and attachments
         Blob key = null; 
@@ -74,7 +77,7 @@ public with sharing class DataTypes {
         // Double: A 64-bit number that includes a decimal point (e) scientific notation isn't supported so we use D instead
         Double pi = null;
         try {
-            pi = 3.14159;
+            pi = 3.14159D;
             System.debug(pi);
             System.debug(pi.round());
         } catch (Exception e) {
@@ -212,5 +215,50 @@ public with sharing class DataTypes {
         Time newTime = Time.newInstance(5, 4, 3, 2);
         System.debug('New time: ' + newTime);
         return newTime;
+    }
+
+    // Non-primitive data types
+
+    public static SObject sobjectDataType() {
+        // SObject: Account, Contact, Opportunity MyCustomSObject__c (Specific) SObject (generic)
+        SObject obj = new Opportunity();
+        Opportunity opp = (Opportunity) obj;
+        opp.Name = 'Example Opportunity';
+        opp.CloseDate = Date.newInstance(2024, 1, 10);
+        opp.CloseDate.format();
+
+        System.debug(opp);
+
+        return opp;
+    }
+
+    public static Account accountDataType() {
+        // Account: Specific SObject
+        Account acct = new Account();
+        acct.Name = 'Maks';
+
+        System.debug(acct);
+
+        return acct;
+    }
+
+    public static Contact contactDataType() {
+        // Contact: Specific SObject
+        Contact con = new Contact(FirstName='Maks', LastName='Kasyanchuk');
+        con.Email = 'kasyanchukmaks22@gmail.com';
+
+        System.debug(con);
+
+        return con;
+    }
+
+    public static ExampleCustomObject__c customObjectDataType() {
+        // ExampleCustomObject__c: User defined (custom) object
+        ExampleCustomObject__c customObj = new ExampleCustomObject__c();
+        customObj.Name = 'Maks';
+
+        System.debug(customObj);
+
+        return customObj;
     }
 }
