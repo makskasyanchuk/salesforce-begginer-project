@@ -4,7 +4,7 @@ public with sharing class DataTypes {
 
     public static Blob blobDataType() {
         // Blob Data type: Represents a collection of binary data. Often used to handle files and attachments
-        Blob key = null; 
+        Blob key; 
         try {
             key = Crypto.generateAesKey(128);
         } catch (Exception e) {
@@ -15,7 +15,7 @@ public with sharing class DataTypes {
 
     public static Boolean booleanDataType() {
         // Boolean: A value that can only be assigned is (true, false, or null)
-        Boolean isEmployed = null;
+        Boolean isEmployed;
         try {
             isEmployed = false;
             if (!isEmployed) {
@@ -33,7 +33,7 @@ public with sharing class DataTypes {
 
     public static Date dateDataType() {
         // Date: A value that indicates a particular day (Do not contain information about current time)
-        Date myDate = null;
+        Date myDate;
         try {
             myDate = Date.newInstance(2025, 11, 22);
             Integer myDay = myDate.day();
@@ -48,8 +48,8 @@ public with sharing class DataTypes {
 
     public static Datetime datetimeDataType() {
         // Datetime: A value that indicates a particular day and time, such as a timestamp
-        Datetime myDateTime = null;
-        Date myDate = null;
+        Datetime myDateTime;
+        Date myDate;
         try {
             myDateTime = Datetime.newInstance(2006, 3, 16, 12, 6, 13);
             myDate = myDateTime.date();
@@ -62,7 +62,7 @@ public with sharing class DataTypes {
 
     public static Decimal decimalDataType() {
         // Decimal: A number that includes a decimal point
-        Decimal decimalNumber = null;
+        Decimal decimalNumber;
         try {
             decimalNumber = 100.2222222;
             System.debug(decimalNumber.setScale(2));
@@ -75,7 +75,7 @@ public with sharing class DataTypes {
 
     public static Double doubleDataType() {
         // Double: A 64-bit number that includes a decimal point (e) scientific notation isn't supported so we use D instead
-        Double pi = null;
+        Double pi;
         try {
             pi = 3.14159D;
             System.debug(pi);
@@ -89,7 +89,7 @@ public with sharing class DataTypes {
 
     public static Id idDataType() {
         // Id: Any valid 18-character Lightning Platform record indentifier
-        Id id = null;
+        Id id;
         try {
             id = '003003KKKKKKKK8';
             System.debug(id);
@@ -103,7 +103,7 @@ public with sharing class DataTypes {
 
     public static Integer integerDataType() {
         // Integer: A 32-bit number that doesn't include a decimal point
-        Integer num = null;
+        Integer num;
         try {
             num = 12;
             System.debug(num);
@@ -117,7 +117,7 @@ public with sharing class DataTypes {
 
     public static Long longDataType() {
         // Long: A 64-bit number that doesn't include a decimal point
-        Long longNum = null;
+        Long longNum;
         try {
             longNum = 2147483648L;
             System.debug('Default long value: ' + longNum);
