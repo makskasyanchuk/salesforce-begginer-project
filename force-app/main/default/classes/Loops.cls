@@ -9,6 +9,12 @@ public with sharing class Loops {
             Account acct = accts[i];
             System.debug(acct);
         }
+
+        // for loop to iterate through the list and get each record of the list, similar to the traditional loop
+        for (Account acct : accts) {
+            Id acctId = acct.Id;
+            System.debug(acctId);
+        }
     }
 
     public static void whileLoop() {
