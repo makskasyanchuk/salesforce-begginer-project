@@ -19,7 +19,9 @@ public with sharing class ControlFlow {
     }
 
     public void switchControl(Integer x) {
+        // Create a new variable to store the x value and switch on result
         Integer result = x;
+        // The switch statement in apex allows to evaluate a variable against multiple values and execute different code block based on the match
         switch on result{
             when 1, 2 {
                 System.debug('first block');
