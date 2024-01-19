@@ -29,7 +29,7 @@ public with sharing class Classes {
 
         public Account getUser {
             get {return USER;}
-            set {USER = value;}
+            private set {USER = value;}
         }
 
     }
